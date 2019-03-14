@@ -8,11 +8,9 @@ class Square extends Component {
             height: this.props.height,
             background: `url(${this.props.imgUrl})`,
             backgroundColor: '#FF6663',
-           
         };
 
         let titleStyle = {
-            
             color: 'gold',
             padding: `${this.props.height - 60}px 20px`,
             
@@ -28,7 +26,6 @@ class Square extends Component {
 
 class Label extends Component {
     render() {
-
         let labelStyle = {
             fontFamily: "sans-serif",
             fontWeight: "bold",
@@ -42,7 +39,7 @@ class Label extends Component {
 }
 
 class Card extends Component {
-    
+
     state = {
         width: 300,
         height: 400
