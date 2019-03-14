@@ -46,6 +46,7 @@ class App extends Component {
             id="sectionCard1"
             >
           <Card id="cardSection" />
+          <Card id="cardSection2" />
           </Section>
       </div>
     );
