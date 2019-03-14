@@ -7,18 +7,14 @@ export default class Navbar extends Component {
     scroll.scrollToTop();
   };
 
-  
+
 
   render() {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
-          <img
-            src={logo}
-            className="nav-logo"
-            alt="Logo"
-            onClick={this.scrollToTop}
-          />
+         
+          <h3 className="nav-logo" onClick={this.scrollToTop}>Sander Vermeer</h3>
           <ul className="nav-items">
             <li className="nav-item">
               <Link
