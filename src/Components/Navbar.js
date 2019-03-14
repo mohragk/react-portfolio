@@ -7,6 +7,8 @@ export default class Navbar extends Component {
     scroll.scrollToTop();
   };
 
+  
+
   render() {
     return (
       <nav className="nav" id="navbar">

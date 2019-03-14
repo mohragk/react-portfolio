@@ -41,6 +41,15 @@
   cursor: pointer;
 }
 
+.nav-item > .active {
+  background: linear-gradient(to bottom, 
+                                var(--off-white) 0%,
+                                var(--off-white) 72%, 
+                                gold 72%, 
+                                gold 100%);
+
+}
+
 .section {
 }
 
