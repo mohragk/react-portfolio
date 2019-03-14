@@ -5,10 +5,8 @@ import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
 import dummyText from "./DummyText";
 
-
-class App extends Component {
-
-  sections = [
+const SectionList = (props) => {
+  const sections = [
     { id: "section1", title: "Section 1", isDark: true },
     { id: "section2", title: "Section 2", isDark: false },
     { id: "section3", title: "Section 3", isDark: true },
@@ -17,21 +15,34 @@ class App extends Component {
 
   ];
 
+  const items = sections.map( (section) =>
+    <Section 
+      title={section.title}
+      subtitle={dummyText}
+      dark={section.isDark}
+      id={section.id}
+      key={section.id}
+    />
+  );
+
+  return (
+    <React.Fragment>
+    {items}
+    </React.Fragment>
+  );
+
+}
+
+
+class App extends Component {
+
+  
+
   render() {
     return (
       <div className="App">
         <Navbar />
-          {this.sections.map((section) => {
-              return (<Section
-                        title={section.title}
-                        subtitle={dummyText}
-                        dark={section.isDark}
-                        id={section.id}
-                        key={section.id}
-                      />
-              );
-
-          })}
+          <SectionList />
       </div>
     );
   }
