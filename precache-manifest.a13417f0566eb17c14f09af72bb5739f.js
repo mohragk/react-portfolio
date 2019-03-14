@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/react-smoothscroll/static/js/runtime~main.dfca5bb3.js"
   },
   {
-    "revision": "0918685a81b7d90473a0",
-    "url": "/react-smoothscroll/static/js/main.9aef6106.chunk.js"
+    "revision": "0a0ca28d17efac6df1b2",
+    "url": "/react-smoothscroll/static/js/main.b83def09.chunk.js"
   },
   {
     "revision": "de49605c8ad9365cf012",
     "url": "/react-smoothscroll/static/js/2.024b87e3.chunk.js"
   },
   {
-    "revision": "0918685a81b7d90473a0",
-    "url": "/react-smoothscroll/static/css/main.5297ef67.chunk.css"
+    "revision": "0a0ca28d17efac6df1b2",
+    "url": "/react-smoothscroll/static/css/main.c7095bf6.chunk.css"
   },
   {
-    "revision": "a5981de33b98b13d9ae4aded8c10493c",
+    "revision": "b9ca4c469dff81e5cebac361efafb8b6",
     "url": "/react-smoothscroll/index.html"
   }
 ];
