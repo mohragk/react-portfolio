@@ -1,14 +1,14 @@
 {
-  "main.css": "/react-smoothscroll/static/css/main.07093a8e.chunk.css",
-  "main.js": "/react-smoothscroll/static/js/main.7aaf1edf.chunk.js",
-  "main.js.map": "/react-smoothscroll/static/js/main.7aaf1edf.chunk.js.map",
-  "runtime~main.js": "/react-smoothscroll/static/js/runtime~main.dfca5bb3.js",
-  "runtime~main.js.map": "/react-smoothscroll/static/js/runtime~main.dfca5bb3.js.map",
-  "static/js/2.11a7c3db.chunk.js": "/react-smoothscroll/static/js/2.11a7c3db.chunk.js",
-  "static/js/2.11a7c3db.chunk.js.map": "/react-smoothscroll/static/js/2.11a7c3db.chunk.js.map",
-  "index.html": "/react-smoothscroll/index.html",
-  "precache-manifest.2380d1b4eb463044410e307ad6d1381f.js": "/react-smoothscroll/precache-manifest.2380d1b4eb463044410e307ad6d1381f.js",
-  "service-worker.js": "/react-smoothscroll/service-worker.js",
-  "static/css/main.07093a8e.chunk.css.map": "/react-smoothscroll/static/css/main.07093a8e.chunk.css.map",
-  "static/media/logo.svg": "/react-smoothscroll/static/media/logo.ee7cd8ed.svg"
+  "main.css": "/static/css/main.07093a8e.chunk.css",
+  "main.js": "/static/js/main.6176a453.chunk.js",
+  "main.js.map": "/static/js/main.6176a453.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.2d39b807.chunk.js": "/static/js/2.2d39b807.chunk.js",
+  "static/js/2.2d39b807.chunk.js.map": "/static/js/2.2d39b807.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.c250e0be539e219d030a092085f41aa8.js": "/precache-manifest.c250e0be539e219d030a092085f41aa8.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.07093a8e.chunk.css.map": "/static/css/main.07093a8e.chunk.css.map",
+  "static/media/logo.svg": "/static/media/logo.ee7cd8ed.svg"
 }
