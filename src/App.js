@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
+import Card from "./Components/Card";
 import dummyText from "./DummyText";
 
 const SectionList = (props) => {
@@ -34,14 +35,18 @@ const SectionList = (props) => {
 
 
 class App extends Component {
-
-  
-
   render() {
     return (
       <div className="App">
         <Navbar />
           <SectionList />
+          <Section 
+            title="Projects"
+            dark={false}
+            id="sectionCard1"
+            >
+          <Card id="cardSection" />
+          </Section>
       </div>
     );
   }

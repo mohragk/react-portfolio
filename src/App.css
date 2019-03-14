@@ -39,8 +39,8 @@ h3.nav {
 .nav-item {
   display: inline;
   margin-left: 2rem;
-  font-family: "Courier New";
-  color: #333;
+  font-family: 'Arial', 'Helvetica Neue';
+  color: #666;
 }
 
 .nav-item:hover {
@@ -54,6 +54,7 @@ h3.nav {
 }
 
 h1 {
+  font-family: 'Domine';
   background: linear-gradient(to bottom, 
                                 rgba(220, 220, 220, 0) 0%,
                                 rgba(220, 220, 220, 0) 72%, 

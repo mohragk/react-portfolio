@@ -1,12 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default function Section({ title, subtitle, dark, id }) {
-  return (
-    <div className={"section" + (dark ? " section-dark" : "")}>
+
+class Section extends Component {
+  render() {
+    const {title, subtitle, dark, id} = this.props;
+    return (
+      <div className={"section" + (dark ? " section-dark" : "")}>
       <div className="section-content" id={id}>
         <h1>{title}</h1>
         <p>{subtitle}</p>
+        {this.props.children}
       </div>
     </div>
-  );
+    )
+
+  }
 }
+
+
+export default Section;
