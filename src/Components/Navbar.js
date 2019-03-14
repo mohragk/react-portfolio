@@ -10,6 +10,7 @@ export default class Navbar extends Component {
 
 
   render() {
+    let offSet = -80;
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
@@ -18,13 +19,13 @@ export default class Navbar extends Component {
           <ul className="nav-items">
             
             
-            <li className="nav-item">
+            <li className="nav-item" id="blue">
               <Link
-                activeClass="active"
+                activeClass="activeGold"
                 to="projectsSection"
                 spy={true}
                 smooth={true}
-                offset={-150}
+                offset={offSet}
                 duration={500}
               >
                 Projects
@@ -33,11 +34,11 @@ export default class Navbar extends Component {
 
             <li className="nav-item">
               <Link
-                activeClass="active"
+                activeClass="activePurple"
                 to="contactSection"
                 spy={true}
                 smooth={true}
-                offset={-150}
+                offset={offSet}
                 duration={500}
               >
                 Contact

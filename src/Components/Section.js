@@ -2,22 +2,36 @@ import React, { Component } from "react";
 
 
 class Section extends Component {
+
+ 
+
   render() {
     const {title, subtitle, dark, id} = this.props;
 
+    const sectionStyle = {
+      minHeight: '100vh',
+      backgroundColor: dark ? '#eee' : '#fff',
+    };
+
     const headerStyle = {
-      background: 'linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 82%, gold 82%, gold 100%)',
-      margin: 0, 
-      paddingTop: 60, 
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: '62px',
+      
+    };
+
+    const sectionContentStyle = {
+        maxWidth: '1280px',
+        margin: '0 auto',
+        padding: '40px'
     };
 
     return (
-      <div className={"section" + (dark ? " section-dark" : "")}>
-        <h1 style={headerStyle}>{title}</h1>
-      <div className="section-content" id={id}>
+      <div style={sectionStyle} id={id}>
+        <div style={{paddingTop: '60px', paddingBottom: '60px'}}>
+          <h1 style={headerStyle}>{title}</h1>
+        </div>
         
-        <p>{subtitle}</p>
+      <div style={sectionContentStyle} >
         {this.props.children}
       </div>
     </div>
