@@ -28,54 +28,7 @@ export default class Navbar extends Component {
                 Section 1
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section2"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 2
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section3"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 3
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section4"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 4
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section5"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 5
-              </Link>
-            </li>
+            
             <li className="nav-item">
               <Link
                 activeClass="active"
@@ -86,6 +39,19 @@ export default class Navbar extends Component {
                 duration={500}
               >
                 Projects
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="contactSection"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
               </Link>
             </li>
           </ul>

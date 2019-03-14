@@ -3,15 +3,13 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
 import Card from "./Components/Card";
+import Contact from "./Components/Contact";
 import dummyText from "./DummyText";
 
 const SectionList = (props) => {
   const sections = [
     { id: "section1", title: "Section 1", isDark: true },
-    { id: "section2", title: "Section 2", isDark: false },
-    { id: "section3", title: "Section 3", isDark: true },
-    { id: "section4", title: "Section 4", isDark: false },
-    { id: "section5", title: "Section 5", isDark: true },
+    
 
   ];
 
@@ -47,6 +45,13 @@ class App extends Component {
             >
           <Card id="cardSection" />
           <Card id="cardSection2" />
+          </Section>
+          <Section 
+            title="Contact"
+            dark={false}
+            id="contactSection"
+          >
+          <Contact />
           </Section>
       </div>
     );
