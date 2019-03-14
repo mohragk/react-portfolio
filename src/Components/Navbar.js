@@ -16,26 +16,15 @@ export default class Navbar extends Component {
          
           <h3 className="nav-logo" onClick={this.scrollToTop}>Sander Vermeer</h3>
           <ul className="nav-items">
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section1"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 1
-              </Link>
-            </li>
+            
             
             <li className="nav-item">
               <Link
                 activeClass="active"
-                to="sectionCard1"
+                to="projectsSection"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-150}
                 duration={500}
               >
                 Projects
@@ -48,7 +37,7 @@ export default class Navbar extends Component {
                 to="contactSection"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-150}
                 duration={500}
               >
                 Contact

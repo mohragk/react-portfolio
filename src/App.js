@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
-import Card from "./Components/Card";
+import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import dummyText from "./DummyText";
 
 const SectionList = (props) => {
   const sections = [
-    { id: "section1", title: "Section 1", isDark: true },
+    { id: "section1", title: "Section 1", isDark: false },
     
 
   ];
@@ -37,22 +37,26 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-          <SectionList />
+         
           <Section 
             title="Projects"
-            dark={false}
-            id="sectionCard1"
+            dark={true}
+            id="projectsSection"
             >
-          <Card id="cardSection" />
-          <Card id="cardSection2" />
+            <Projects />
           </Section>
           <Section 
             title="Contact"
             dark={false}
             id="contactSection"
           >
-          <Contact />
+            <Contact />
           </Section>
+          <Section
+            title=""
+            dark={true}
+            id="dummySection"
+          />
       </div>
     );
   }

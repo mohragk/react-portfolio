@@ -29,8 +29,9 @@ class Label extends Component {
         let labelStyle = {
             fontFamily: "sans-serif",
             fontWeight: "bold",
-            padding: 13,
-            margin: 0
+            padding: 10,
+            margin: 5,
+
         };
         return (
             <div style={labelStyle}>{this.props.text}</div>
@@ -40,19 +41,25 @@ class Label extends Component {
 
 class Card extends Component {
 
+    getHeight = () => {
+        return this.state.width + 20
+    }
+
     state = {
         width: 300,
-        height: 400
+        height: 350
     };
 
     render() {
         let cardStyle = {
             height: this.state.height,
             width: this.state.width,
-            padding: 0,
+            padding: '0px 10px',
+            marginRight: 20,
+            marginBottom: 60,
             backgroundColor: "#FFF",
-            WebkitFilter: "drop-shadow(0px 0px 5px #666)",
-      filter: "drop-shadow(0px 0px 5px #666)"
+            float: 'left',
+            background: "linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 62%, gold 62%, gold 100%)"
         };
 
         return (
