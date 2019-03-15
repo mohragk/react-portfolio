@@ -9,7 +9,7 @@ class Section extends Component {
     const {title, subtitle, dark, id} = this.props;
 
     const sectionStyle = {
-      minHeight: '100vh',
+      minHeight: 'calc(100vh - 80px)',
       backgroundColor: dark ? '#eee' : '#fff',
     };
 
@@ -20,15 +20,19 @@ class Section extends Component {
     };
 
     const sectionContentStyle = {
-        maxWidth: '1280px',
-        margin: '0 auto',
-        padding: '40px'
+       
+        margin: '0px auto',
+        padding: '0px'
+    };
+
+    const colorStyle = {
+      color: this.props.color
     };
 
     return (
       <div style={sectionStyle} id={id}>
-        <div style={{paddingTop: '60px', paddingBottom: '60px'}}>
-          <h1 style={headerStyle}>{title}</h1>
+        <div style={{paddingTop: '60px', paddingBottom: '0px'}}>
+          <h1 style={headerStyle}>{title}<span style={colorStyle}>.</span></h1>
         </div>
         
       <div style={sectionContentStyle} >

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Card.css";
 
 
 class Square extends Component {
@@ -11,40 +12,25 @@ class Square extends Component {
 
         let titleStyle = {
             position: 'relative',
-            top: '220px',
+            top: `${this.props.height -60}px`,
             left: '20px',
-            color: 'white',
+            color: 'gold',
             fontSize: '30px',
-            
+            backgroundColor: 'black',
+            width: '100%'
             
         };
         return (
             <div style={squareStyle}>
                 <h2 style={titleStyle}>{this.props.title}</h2>
-                <CardButton />
+                
             </div>
             
         );
     }
 }
 
-class CardButton extends Component {
-    render() {
-        const buttonStyle = {
-            position: 'relative',
-            left: '10px',
-            top: '10px',
-            width: '100px',
-            height: 30
-        };
 
-        return (
-            
-                <button style={buttonStyle} >BUTTON</button>
-            
-        );
-    }
-}
 
 class Label extends Component {
     render() {
@@ -69,29 +55,27 @@ class Card extends Component {
 
     state = {
         width: 600,
-        height: this.getHeight
+        
     };
 
     getHeight = () => {
-        return this.state.width + 20;
+        return this.state.width;
     }
 
     render() {
         let cardStyle = {
             height: this.state.height,
             width: this.state.width,
-            padding: '0px 10px',
-            marginRight: 20,
-            marginBottom: 60,
-            backgroundColor: "#FFF",
-            float: 'left',
-            background: "linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 62%, gold 62%, gold 100%)"
         };
 
         return (
-            <div style={cardStyle} id={this.props.id} height={this.state.height} width={this.state.width}>
-                <Square title={this.props.title} height={this.state.width} imgUrl="./img/monosynth-card.png" />
-                <Label text={this.props.text} />
+            <div>
+                <a href={this.props.targetUrl} target="_blank">
+                <div className="card" style={cardStyle} id={this.props.id} height={this.state.height} width={this.state.width}>
+                    <Square title={this.props.title} height={this.state.width * 0.65} imgUrl={this.props.imgUrl} />
+                    <Label text={this.props.text} />
+                </div>
+                </a>
             </div>
         );
     }

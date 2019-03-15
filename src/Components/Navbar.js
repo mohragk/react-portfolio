@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+import "./NavBar.css"
 
-export default class Navbar extends Component {
+export default class Navibar extends Component {
   scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -12,14 +12,14 @@ export default class Navbar extends Component {
   render() {
     let offSet = -80;
     return (
-      <nav className="nav" id="navbar">
-        <div className="nav-content">
+      <nav className="navi" id="navibar">
+        <div className="navi-content">
          
-          <h3 className="nav-logo" onClick={this.scrollToTop}>Sander Vermeer</h3>
-          <ul className="nav-items">
+          <h5 className="navi-logo" onClick={this.scrollToTop}>Sander Vermeer</h5>
+          <ul className="navi-items">
             
             
-            <li className="nav-item" id="blue">
+            <li className="navi-item" id="blue">
               <Link
                 activeClass="activeGold"
                 to="projectsSection"
@@ -28,11 +28,11 @@ export default class Navbar extends Component {
                 offset={offSet}
                 duration={500}
               >
-                Projects
+                projects
               </Link>
             </li>
 
-            <li className="nav-item">
+            <li className="navi-item">
               <Link
                 activeClass="activePurple"
                 to="contactSection"
@@ -41,7 +41,7 @@ export default class Navbar extends Component {
                 offset={offSet}
                 duration={500}
               >
-                Contact
+                contact
               </Link>
             </li>
           </ul>
