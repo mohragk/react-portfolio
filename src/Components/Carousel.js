@@ -10,16 +10,24 @@ import Card from "./Card";
 import ProjectItem from "./ProjectItem";
 
 
+
 const items = [
   {
     imgUrl: './img/monosynth-card.png',
-    title: "An anlogue modelled synthesizer VST, made with the Juce framework in C++.",
-    text: "It features 3 oscillators, 3 filters and a simple, yet effective, sequencer."
+    title: "Monosynth-1, an analogue modelled synthesizer VST (C++)",
+    text: `This is a software synthesizer, made to be used as a VST plug-in or standalone application. It's realised in C++ using the Juce framework. It features 3 oscillators, 3 different filter models, 3 envelope generators, an LFO and a simple yet powerfull sequencer. `,
+    button1Text: 'git',
+    button1Url: 'https://github.com/mohragk/VermeerMonosynth-1',
+
+    
   },
   {
     imgUrl: './img/fourier-card.png',
-    title: "A second project, yet unexplained.",
-    text: "This would be the body of the text"
+    title: "A visualisation of the Fourier Series in P5.js",
+    text: "A rendering of harmonics in audio signals. Switch between square wave, saw wave and triangle wave and add harmonics. Use the keyboard to play some notes.",
+    button1Url: 'https://editor.p5js.org/mohragk/full/BkMiw4KxV',
+    button1Text: 'demo'
+
   },
   {
     title: "An anlogue modelled synthesizer VST, made with the Juce framework in C++.",
@@ -77,6 +85,10 @@ class ProjectCarousel extends Component {
             imgUrl={item.imgUrl}
             title={item.title}
             text={item.text}
+            button1Text={item.button1Text}
+            button1Url={item.button1Url}
+            button2Text={item.button2Text}
+            button2Url={item.button2Url}
           />
           </CarouselItem>
       );
