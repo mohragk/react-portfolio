@@ -13,6 +13,14 @@ code {
     monospace;
 }
 
+.carousel-control-prev, .carousel-control-next {
+  max-width: 120px;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  cursor: pointer;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -25,23 +33,27 @@ code {
 {
   content: '}';
   font-size: 55px;
-  color: gold;
+  color: darkgray;
 }
 
 .carousel-control-prev-icon:after {
   content: '{';
   font-size: 55px;
-  color: gold;
+  color: darkgray;
 }
 
-.carousel-control-next-icon:hover {
-  cursor: pointer;
-}
 
-.carousel-control-prev-icon:hover {
-  cursor: pointer;
+.carousel-indicators {
+  margin-bottom: 40px;
 }
 
 .carousel-indicators li {
-  background-color: gold;
+  background-color: darkgray;
+}
+
+
+@media (max-width: 800px) {
+  .carousel-indicators {
+    display: none;
+  }
 }

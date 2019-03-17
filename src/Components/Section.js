@@ -6,7 +6,7 @@ class Section extends Component {
  
 
   render() {
-    const {title, subtitle, dark, id} = this.props;
+    const {title, dark, id} = this.props;
 
     const sectionStyle = {
       minHeight: 'calc(100vh - 80px)',
@@ -20,7 +20,7 @@ class Section extends Component {
     };
 
     const sectionContentStyle = {
-       
+      position: 'relative',
         margin: '0px auto',
         padding: '0px'
     };

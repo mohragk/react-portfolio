@@ -70,7 +70,7 @@ class Card extends Component {
 
         return (
             <div>
-                <a href={this.props.targetUrl} target="_blank">
+                <a href={this.props.targetUrl} target="_blank" rel="noopener noreferrer">
                 <div className="card" style={cardStyle} id={this.props.id} height={this.state.height} width={this.state.width}>
                     <Square title={this.props.title} height={this.state.width * 0.65} imgUrl={this.props.imgUrl} />
                     <Label text={this.props.text} />

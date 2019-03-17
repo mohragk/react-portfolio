@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Navibar from "./Components/Navbar";
 import Section from "./Components/Section";
-import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Hello from "./Components/Hello";
 import Footer from "./Components/Footer";
@@ -15,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Navibar />
           <Section
-            title="hello"
+            title="sander vermeer"
             dark={false}
             color="skyblue"
             id="helloSection"

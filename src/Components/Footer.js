@@ -3,13 +3,15 @@ import React, {Component} from "react";
 class Footer extends Component {
     render() {
         let footerStyle = {
-            backgroundColor: '#CCC',
-            padding: '20px 40px'
+            position: 'fixed',
+            bottom: '10px',
+            left: '10px',
+            padding: '0px 20px'
         };
 
         return (
             <div style={footerStyle}>
-                <p>copyright Sander Vermeer {(new Date().getFullYear())} (c).</p>
+                <p><small>Sander Vermeer &copy; {(new Date().getFullYear())}, all rights reserved</small></p>
             </div>
         );
     }

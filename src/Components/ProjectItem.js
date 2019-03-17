@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Container, Row, Col, Button} from "reactstrap";
+import {Container, Row, Col} from "reactstrap";
 import "./ProjectItem.css";
 
 export default class ProjectItem extends Component {
@@ -7,43 +7,27 @@ export default class ProjectItem extends Component {
     render() {
         const {title, text, imgUrl, button1Url, button1Text, button2Url, button2Text} = this.props;
 
-
         const imgStyle = {
-            backgroundImage: `url(${imgUrl})`,
-            backgroundSize: 'contain',
-            position: 'absolute',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            width: '100%',
-            height: '100%',
-            minWidth: '150px',
-            
+            maxHeight: '700px',
+            padding: '2%',
+            background: 'linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 22%, gold 22%, gold 100%)',
         };
 
-        const buttonStyle = {
-            border: 'none',
-            color: 'black',
-            padding: '0px 5px',
-            textAlign: 'center',
-            textDecoration: 'none',
-            display: 'inline-block',
-            background: 'linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 90%, gold 90%, gold 100%)' 
-        };
-
-        
         return (
-            <Container fluid style={{ minHeight: '72vh', maxHeight: '72vh'}}>
-                <Row style={{minHeight: '72vh'} } noGutters>
-                    <Col style={{margin:'60px'}}>
-                            <div style={imgStyle} />
+            <Container fluid style={{ minHeight: 'calc(100vh - 260px)'}}>
+                <Row style={{minHeight: '72vh'} } className="d-flex flex-wrap align-items-center m-4">
+                    <Col style={{padding:'2vw 0px 2vw 2vw'}}>
+                        
+                         <img src={imgUrl} className="img-fluid float-right projectImage" alt={title} style={imgStyle} />
+  
                     </Col>
-                    <Col style={{marginLeft: '0px', marginRight:'160px'}}>
-                    <div style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', minHeight: '50%'}}>
+                    <Col style={{marginLeft: '2vw', marginRight:'4vw'}}>
+                    
                         <h1>{title}</h1>
                         <p className="lead">{text}</p>
-                        <a className="projectButton" href={button1Url} target="_blank" ><h4>{button1Text}</h4></a>
-                        <a className="projectButton" href={button2Url} target="_blank" ><h4>{button2Text}</h4></a>
-                    </div>
+                        <a className="projectButton" href={button1Url} target="_blank" rel="noopener noreferrer"><h4>{button1Text}</h4></a>
+                        <a className="projectButton" href={button2Url} target="_blank" rel="noopener noreferrer"><h4>{button2Text}</h4></a>
+             
 
                         
                        

@@ -4,9 +4,7 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
 } from 'reactstrap';
-import Card from "./Card";
 import ProjectItem from "./ProjectItem";
 
 
@@ -16,22 +14,46 @@ const items = [
     imgUrl: './img/monosynth-card.png',
     title: "Monosynth-1, an analogue modelled synthesizer VST (C++)",
     text: `This is a software synthesizer, made to be used as a VST plug-in or standalone application. It's realised in C++ using the Juce framework. It features 3 oscillators, 3 different filter models, 3 envelope generators, an LFO and a simple yet powerfull sequencer. `,
-    button1Text: 'git',
+    button1Text: 'github',
     button1Url: 'https://github.com/mohragk/VermeerMonosynth-1',
-
-    
   },
   {
     imgUrl: './img/fourier-card.png',
     title: "A visualisation of the Fourier Series in P5.js",
     text: "A rendering of harmonics in audio signals. Switch between square wave, saw wave and triangle wave and add harmonics. Use the keyboard to play some notes.",
     button1Url: 'https://editor.p5js.org/mohragk/full/BkMiw4KxV',
-    button1Text: 'demo'
+    button1Text: 'demo',
+    button2Url: 'https://editor.p5js.org/mohragk/sketches/BkMiw4KxV',
+    button2Text: 'edit',
+  },
+  {
+    imgUrl: './img/shifter-card.png',
+    title: "DIY sequential shifter using Arduino",
+    text: "A simple, robust up-down shifter, designed to work with racing games. The control board is programmed in Arduino and extended to work with a (future) handbrake. A GUI was created for setting different variables for said handbrake.",
+    button1Url: 'https://www.youtube.com/watch?v=0ZPwsYKEWEM',
+    button1Text: 'youtube',
+    button2Url: 'https://github.com/mohragk/Shifter_Handbrake_DIY',
+    button2Text: 'github',
+  },
+  {
+    imgUrl: './img/wordyclock-card.png',
+    title: "Wordy Clock",
+    text: "A clock that literally tells time.",
+    button1Url: 'https://editor.p5js.org/mohragk/full/cuRLIK3Pq',
+    button1Text: 'demo',
+    button2Url: 'https://editor.p5js.org/mohragk/sketches/cuRLIK3Pq',
+    button2Text: 'edit',
 
   },
   {
-    title: "An anlogue modelled synthesizer VST, made with the Juce framework in C++.",
-    text: "It features 3 oscillators, 3 filters and a simple, yet effective, sequencer."
+    imgUrl: './img/matrix-card.png',
+    title: "Matrix Effect made in P5.js",
+    text: "A contemporary remake of a classic.",
+    button1Url: 'https://editor.p5js.org/mohragk/full/Sk2QPOsWE',
+    button1Text: 'demo',
+    button2Url: 'https://editor.p5js.org/mohragk/sketches/Sk2QPOsWE',
+    button2Text: 'edit',
+
   },
 ];
 
@@ -79,7 +101,7 @@ class ProjectCarousel extends Component {
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
+          key={item.imgUrl}
         >
           <ProjectItem
             imgUrl={item.imgUrl}
@@ -89,6 +111,7 @@ class ProjectCarousel extends Component {
             button1Url={item.button1Url}
             button2Text={item.button2Text}
             button2Url={item.button2Url}
+            key={item.title}
           />
           </CarouselItem>
       );
@@ -100,11 +123,12 @@ class ProjectCarousel extends Component {
         next={this.next}
         previous={this.previous}
         interval={false}
+        
       >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} className=".hide-600-up" id="1" />
         {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} id="2" />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} id="3" />
       </Carousel>
     );
   }
