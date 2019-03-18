@@ -20,18 +20,15 @@ class Contact extends Component {
                 
                 <Row style={{ minHeight: 'calc(60vh - 240px)'}} >
                     <Col className="col-12">
-                        <h1 className="display-3">I'm available for work.</h1>
+                        <h1 className="display-4">I'm available for work.</h1>
                     </Col>
                     <Col>   
-                        <ContactSnippet title="email." info="info@sandervermeer.nl" url="mail:info@sandervermeer.nl" />
+                        <ContactSnippet title="email." info="info@sander-vermeer.nl" url="mailto:info@sander-vermeer.nl" />
                     </Col>
                     <Col>  
                         <ContactSnippet  title="social." info="linkedin" url="https://www.linkedin.com/in/sahvermeer/"/> 
-                        
                     </Col>
-                    <Col>   
-                        <ContactSnippet  title="call." info="06 40 88 33 56 " url="tel:0640883356" />
-                    </Col>
+                    
                 </Row>
             </Container>  
         );

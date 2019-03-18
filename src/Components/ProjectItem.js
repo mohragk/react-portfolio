@@ -9,6 +9,7 @@ export default class ProjectItem extends Component {
 
         const imgStyle = {
             maxHeight: '700px',
+            minWidth: '250px',
             padding: '2%',
             background: 'linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 22%, gold 22%, gold 100%)',
         };

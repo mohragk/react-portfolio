@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./Footer.css";
 
 class Footer extends Component {
     render() {
@@ -10,7 +11,7 @@ class Footer extends Component {
         };
 
         return (
-            <div style={footerStyle}>
+            <div style={footerStyle} className="footer-content" >
                 <p><small>Sander Vermeer &copy; {(new Date().getFullYear())}, all rights reserved</small></p>
             </div>
         );

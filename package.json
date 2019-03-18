@@ -1,8 +1,7 @@
 {
-  "name": "react-smoothscroll",
+  "name": "sander-vermeer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mohragk.github.io/react-smoothscroll/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
@@ -16,8 +15,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

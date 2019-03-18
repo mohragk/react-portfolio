@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./Section.css";
 
 class Section extends Component {
 
@@ -14,9 +14,7 @@ class Section extends Component {
     };
 
     const headerStyle = {
-      textAlign: 'center',
-      fontSize: '62px',
-      
+      textAlign: 'center',      
     };
 
     const sectionContentStyle = {
@@ -31,8 +29,8 @@ class Section extends Component {
 
     return (
       <div style={sectionStyle} id={id}>
-        <div style={{paddingTop: '60px', paddingBottom: '0px'}}>
-          <h1 style={headerStyle}>{title}<span style={colorStyle}>.</span></h1>
+        <div style={{paddingTop: '40px', paddingBottom: '0px'}}>
+          <h1 className="section-header" style={headerStyle}>{title}<span style={colorStyle}>.</span></h1>
         </div>
         
       <div style={sectionContentStyle} >

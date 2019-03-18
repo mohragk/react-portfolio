@@ -75,7 +75,7 @@ export default class Navibar extends Component {
           <h5 className="navi-logo" onClick={this.scrollToTop}>sander vermeer</h5>
           <ul className="navi-items">
             
-          <li className="navi-item" id="blue">
+          <li className="navi-item hidden" id="blue">
               <Link
                 activeClass="activeGold"
                 to="helloSection"
@@ -84,6 +84,7 @@ export default class Navibar extends Component {
                 offset={offSet}
                 duration={500}
                 onSetActive={ (to) => this.onSetActiveHandler(to) }
+                style= {{display: 'none', margin: '0px'}}
               >
                 
               </Link>
@@ -126,9 +127,8 @@ export default class Navibar extends Component {
             smooth={true}
             offset={offSet}
             duration={500}
-            style={{position: 'fixed', right: '120px', bottom: '30px', borderBottom: `2px solid ${this.state.activeColor}`}}
-            className="navi-item"
-            //onSetActive={ (to) => this.onSetActiveHandler(to) }
+            style={{position: 'fixed', right: '40px', bottom: '30px', borderBottom: `2px solid ${this.state.activeColor}`}}
+            className="navi-item next-button"
             >
             next
           </Link>

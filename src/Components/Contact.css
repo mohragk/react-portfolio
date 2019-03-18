@@ -6,7 +6,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    background: linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 95%, crimson 95%, crimson 100%);
+    border-bottom: 2px solid crimson;
 }
 
 .contactButton:after {
@@ -17,4 +17,29 @@
 .contactButton:hover {
     color: black;
     text-decoration: none;
+}
+
+.contactButton h4 {
+   
+}
+
+@media (max-width: 760px)
+{
+    h1.display-4 {
+        font-size: 8vw;
+    }
+    .contactButton h4 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .contactButton h4 {
+        font-size: 3vw;
+    }
+
+    h1.display-4 {
+        font-size: 8vw;
+    }
 }
