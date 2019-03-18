@@ -130,7 +130,7 @@ export default class Navibar extends Component {
             className="navi-item"
             //onSetActive={ (to) => this.onSetActiveHandler(to) }
             >
-            next.
+            next
           </Link>
         </div>
       </nav>

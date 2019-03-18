@@ -30,7 +30,7 @@ class Contact extends Component {
                         
                     </Col>
                     <Col>   
-                        <ContactSnippet  title="call." info="(031) 6 40 88 33 56 " url="tel:0640883356" />
+                        <ContactSnippet  title="call." info="06 40 88 33 56 " url="tel:0640883356" />
                     </Col>
                 </Row>
             </Container>  

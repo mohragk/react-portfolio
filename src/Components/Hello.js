@@ -13,7 +13,7 @@ class Hello extends Component {
                 <h2>I specialise in
                     <span className="display-4">
                         <span style={{color: 'skyblue'}}><strong> &#123;</strong></span> 
-                        <span style={{fontSize: '32px'}}>C++, Java, JavaScript</span>
+                        <span style={{fontSize: '32px'}}> C++, Java, JavaScript </span>
                         <span style={{color: 'skyblue'}}><strong>&#125; </strong></span> 
                     </span>
                             and also like to fool around with Arduino. Check out some of my projects <Link
