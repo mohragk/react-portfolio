@@ -24,7 +24,7 @@ export default class Navibar extends Component {
     activeColor: "skyblue",
     prevScrollpos: window.pageYOffset,
     visible: true,
-    menuEntered: false
+    menuEntered: false,
   };
 
   targets = [
@@ -80,14 +80,18 @@ export default class Navibar extends Component {
   };
 
   handleScroll = (e) => {  
+    const entered = this.state.menuEntered;
+    if (entered) return;
+
+    const {prevScrollpos} = this.state;
     const shouldAlwaysScroll = window.innerWidth < 1024;
     const currentScrollPos = window.pageYOffset;
-    const visible = shouldAlwaysScroll ? currentScrollPos < this.state.prevScrollpos :  currentScrollPos < 100;
+    const visible = shouldAlwaysScroll ? currentScrollPos < prevScrollpos :  currentScrollPos < 100;
     
-    const update = !this.state.menuEntered;
+    
 
     const timeoutLength = 300;
-    if (update) {
+    if (!entered) {
       setTimeout(() => {
         this.setState({
           prevScrollpos: currentScrollPos,
@@ -100,6 +104,7 @@ export default class Navibar extends Component {
 
   enterMenu = () => {
     this.setState({ visible: true , menuEntered: true});
+    console.log('entered');
   }
 
   leaveMenu = () => {
@@ -107,12 +112,10 @@ export default class Navibar extends Component {
      setTimeout(() => {
       this.setState({ visible: false, menuEntered: false });
      }, timeoutLength);
+     console.log('leaved');
   }
 
 
-  handleClick = () => {
-    this.setState({ visible: !this.state.visible });
-  }
 
   render() {
     let offSet = (this.state.activeTargetName === "helloSection") ? -80 : -20;
@@ -120,7 +123,7 @@ export default class Navibar extends Component {
       <nav
         onMouseEnter={this.enterMenu}
         onMouseLeave={this.leaveMenu}  
-        onClick={this.handleClick}
+        
         className={classnames("navi", {"navi-hidden": !this.state.visible})} id="navibar"
       >
         <div className="navi-content">
@@ -179,7 +182,6 @@ export default class Navibar extends Component {
         <div>
           <Link
             onClick={this.getNextTarget}
-            onMousEnter={null}
             to={this.state.activeTargetName}
             smooth={true}
             offset={offSet}
