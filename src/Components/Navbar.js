@@ -22,6 +22,7 @@ export default class Navibar extends Component {
     activeTarget: 0,
     activeTargetName: "projects",
     activeColor: "skyblue",
+    nextTarget: "contact",
     prevScrollpos: window.pageYOffset,
     visible: true,
     menuEntered: false,
@@ -50,7 +51,7 @@ export default class Navibar extends Component {
     this.setState({
       activeTarget: current,
       activeTargetName: this.targets[current].name,
-      activeColor: this.targets[current].color
+      activeColor: this.targets[current].color,
     });
 
   };
@@ -77,6 +78,8 @@ export default class Navibar extends Component {
         activeColor: newColor,
       }
     );
+
+    
   };
 
   handleScroll = (e) => {  
@@ -86,7 +89,7 @@ export default class Navibar extends Component {
     const {prevScrollpos} = this.state;
     const shouldAlwaysScroll = window.innerWidth < 1024;
     const currentScrollPos = window.pageYOffset;
-    const visible = shouldAlwaysScroll ? currentScrollPos < prevScrollpos :  currentScrollPos < 100;
+    const visible = shouldAlwaysScroll ? currentScrollPos < prevScrollpos :  currentScrollPos < 1;
 
     
     if (!entered) {  
@@ -108,8 +111,10 @@ export default class Navibar extends Component {
 
 
 
+
   render() {
-    let offSet = (this.state.activeTargetName === "hello") ? -80 : -20;
+    let offSet = -20;
+    
     return (
       <React.Fragment>
       <nav

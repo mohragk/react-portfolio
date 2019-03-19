@@ -44,13 +44,13 @@ code {
 {
   content: '}';
   font-size: 55px;
-  color: darkgray;
+  color: #4c4c47;
 }
 
 .carousel-control-prev-icon:after {
   content: '{';
   font-size: 55px;
-  color: darkgray;
+  color: #4c4c47;
 }
 
 
@@ -59,7 +59,7 @@ code {
 }
 
 .carousel-indicators li {
-  background-color: darkgray;
+  background-color: #4c4c47;
 }
 
 @media (max-height: 760px) {
