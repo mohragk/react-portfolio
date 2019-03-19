@@ -17,7 +17,7 @@ class App extends Component {
             title="sander vermeer"
             dark={false}
             color="skyblue"
-            id="helloSection"
+            id="hello"
           >
             <Hello />
           </Section>
@@ -25,7 +25,7 @@ class App extends Component {
             title="projects"
             dark={true}
             color='gold'
-            id="projectsSection"
+            id="projects"
             >
             <ProjectCarousel />
           </Section>
@@ -33,7 +33,7 @@ class App extends Component {
             title="contact"
             dark={false}
             color="crimson"
-            id="contactSection"
+            id="contact"
           >
             <Contact />
           </Section>

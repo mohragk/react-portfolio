@@ -10,28 +10,32 @@ export default class Navibar extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("wheel", this.handleScroll);
   }
   
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("wheel", this.handleScroll);
   }
  
   state = {
     activeTarget: 0,
-    activeTargetName: "projectsSection",
+    activeTargetName: "projects",
     activeColor: "skyblue",
+    prevScrollpos: window.pageYOffset,
     visible: true,
+    menuEntered: false
   };
 
   targets = [
     {
-      id: 0, name: "helloSection", color: "skyblue"
+      id: 0, name: "hello", color: "skyblue"
     },
     {
-      id: 1, name: "projectsSection", color: "gold"
+      id: 1, name: "projects", color: "gold"
     },
     {
-      id: 2, name: "contactSection", color: "crimson"
+      id: 2, name: "contact", color: "crimson"
     },
   ];
 
@@ -75,26 +79,36 @@ export default class Navibar extends Component {
     );
   };
 
-  handleScroll = () => {  
+  handleScroll = (e) => {  
+    const shouldAlwaysScroll = window.innerWidth < 1024;
     const currentScrollPos = window.pageYOffset;
-    const visible = currentScrollPos < 100;
-  
-    this.setState({
-      prevScrollpos: currentScrollPos,
-      visible
-    });
+    const visible = shouldAlwaysScroll ? currentScrollPos < this.state.prevScrollpos :  currentScrollPos < 100;
+    
+    const update = !this.state.menuEntered;
+
+    const timeoutLength = 300;
+    if (update) {
+      setTimeout(() => {
+        this.setState({
+          prevScrollpos: currentScrollPos,
+          visible
+        });
+      }, timeoutLength);
+    }
   };
 
+
   enterMenu = () => {
-    this.setState({ visible: true });
+    this.setState({ visible: true , menuEntered: true});
   }
 
   leaveMenu = () => {
     let timeoutLength = 300;
      setTimeout(() => {
-      this.setState({ visible: false });
+      this.setState({ visible: false, menuEntered: false });
      }, timeoutLength);
   }
+
 
   handleClick = () => {
     this.setState({ visible: !this.state.visible });
@@ -117,8 +131,9 @@ export default class Navibar extends Component {
           <li className="navi-item hidden" id="blue">
               <Link
                 activeClass="activeGold"
-                to="helloSection"
+                to="hello"
                 spy={true}
+                hashSpy={true}
                 smooth={true}
                 offset={offSet}
                 duration={500}
@@ -133,8 +148,9 @@ export default class Navibar extends Component {
               <Link
                 id="ps"
                 activeClass="activeGold"
-                to="projectsSection"
+                to="projects"
                 spy={true}
+                hashSpy={true}
                 smooth={true}
                 offset={offSet}
                 duration={500}
@@ -147,8 +163,9 @@ export default class Navibar extends Component {
             <li className="navi-item">
               <Link
                 activeClass="activePurple"
-                to="contactSection"
+                to="contact"
                 spy={true}
+                hashSpy={true}
                 smooth={true}
                 offset={offSet}
                 duration={500}
@@ -162,6 +179,7 @@ export default class Navibar extends Component {
         <div>
           <Link
             onClick={this.getNextTarget}
+            onMousEnter={null}
             to={this.state.activeTargetName}
             smooth={true}
             offset={offSet}
@@ -172,7 +190,10 @@ export default class Navibar extends Component {
             next
           </Link>
         </div>
+        <div style={{width: '100%', height: '40px'}} >
+     </div>
       </nav>
+    
     );
   }
 }

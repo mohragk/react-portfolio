@@ -33,7 +33,7 @@ class Footer extends Component {
 
         return (
             <div className={classnames("footer-content", {"footer-content-hidden": !this.state.visible})} >
-                <p><small>sander vermeer &copy; {(new Date().getFullYear())}, all rights reserved</small></p>
+                <p><small>sander vermeer &copy; {(new Date().getFullYear())}</small></p>
             </div>
         );
     }
