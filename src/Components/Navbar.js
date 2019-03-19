@@ -90,7 +90,7 @@ export default class Navibar extends Component {
     
     
 
-    const timeoutLength = 300;
+    const timeoutLength = 0;
     if (!entered) {
       setTimeout(() => {
         this.setState({
@@ -104,7 +104,6 @@ export default class Navibar extends Component {
 
   enterMenu = () => {
     this.setState({ visible: true , menuEntered: true});
-    console.log('entered');
   }
 
   leaveMenu = () => {
@@ -112,7 +111,6 @@ export default class Navibar extends Component {
      setTimeout(() => {
       this.setState({ visible: false, menuEntered: false });
      }, timeoutLength);
-     console.log('leaved');
   }
 
 
