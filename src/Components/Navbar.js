@@ -80,24 +80,20 @@ export default class Navibar extends Component {
   };
 
   handleScroll = (e) => {  
-    const entered = this.state.menuEntered;
+    const entered = this.state.menuEntered && window.innerWidth > 1023;
     if (entered) return;
 
     const {prevScrollpos} = this.state;
     const shouldAlwaysScroll = window.innerWidth < 1024;
     const currentScrollPos = window.pageYOffset;
     const visible = shouldAlwaysScroll ? currentScrollPos < prevScrollpos :  currentScrollPos < 100;
-    
-    
 
-    const timeoutLength = 0;
-    if (!entered) {
-      setTimeout(() => {
-        this.setState({
-          prevScrollpos: currentScrollPos,
-          visible
-        });
-      }, timeoutLength);
+    
+    if (!entered) {  
+      this.setState({
+        prevScrollpos: currentScrollPos,
+        visible
+      });
     }
   };
 
@@ -107,17 +103,15 @@ export default class Navibar extends Component {
   }
 
   leaveMenu = () => {
-    let timeoutLength = 300;
-     setTimeout(() => {
       this.setState({ visible: false, menuEntered: false });
-     }, timeoutLength);
   }
 
 
 
   render() {
-    let offSet = (this.state.activeTargetName === "helloSection") ? -80 : -20;
+    let offSet = (this.state.activeTargetName === "hello") ? -80 : -20;
     return (
+      <React.Fragment>
       <nav
         onMouseEnter={this.enterMenu}
         onMouseLeave={this.leaveMenu}  
@@ -177,23 +171,24 @@ export default class Navibar extends Component {
             </li>
           </ul>
         </div>
-        <div>
-          <Link
-            onClick={this.getNextTarget}
-            to={this.state.activeTargetName}
-            smooth={true}
-            offset={offSet}
-            duration={500}
-            style={{position: 'fixed', right: '40px', bottom: '30px', borderBottom: `2px solid ${this.state.activeColor}`}}
-            className="navi-item next-button"
-            >
-            next
-          </Link>
-        </div>
+        
         <div style={{width: '100%', height: '40px'}} >
      </div>
-      </nav>
-    
+     </nav>
+      <nav><div>
+      <Link
+        onClick={this.getNextTarget}
+        to={this.state.activeTargetName}
+        smooth={true}
+        offset={offSet}
+        duration={500}
+        style={{position: 'fixed', right: '40px', bottom: '30px', borderBottom: `2px solid ${this.state.activeColor}`, zIndex: '1000' }}
+        className="navi-item next-button"
+        >
+        next
+      </Link>
+    </div></nav>
+    </React.Fragment>
     );
   }
 }

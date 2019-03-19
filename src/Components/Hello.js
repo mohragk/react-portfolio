@@ -19,10 +19,10 @@ class Hello extends Component {
                             and also like to fool around with Arduino. Check out some of my projects <Link
                             activeClass="helloButton"
                             className="helloButton"
-                            to="projectsSection"
+                            to="projects"
                             spy={true}
                             smooth={true}
-                            offset={-80}
+                            offset={-20}
                             duration={500}
                             style={{cursor: 'pointer'}}
                     > 
