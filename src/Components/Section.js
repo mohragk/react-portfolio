@@ -9,7 +9,7 @@ class Section extends Component {
     const {title, dark, id} = this.props;
 
     const sectionStyle = {
-      minHeight: 'calc(100vh - 80px)',
+      minHeight: 'calc(100vh - 20px)',
       backgroundColor: dark ? '#eee' : '#fff',
     };
 

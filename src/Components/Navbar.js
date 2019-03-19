@@ -1,16 +1,26 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-import "./NavBar.css"
+import "./NavBar.css";
+import classnames from "classnames";
 
 export default class Navibar extends Component {
   scrollToTop = () => {
     scroll.scrollToTop();
   };
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+ 
   state = {
     activeTarget: 0,
     activeTargetName: "projectsSection",
-    activeColor: "skyblue"
+    activeColor: "skyblue",
+    visible: true,
   };
 
   targets = [
@@ -42,34 +52,63 @@ export default class Navibar extends Component {
   };
 
   onSetActiveHandler = (name) => {
-    let shittyArray = this.targets.map(
-      
-      (targ) => {
-        let num = 0;
-        if (targ.name === name) num++;
-        return num;
-      }
-    );
+    
+    let num = -10;
+    for (let item of this.targets)
+    {
+      if(item.name === name) num = item.id + 1;
+    }
+    
+    if (num < 0) return;
 
-    let index = shittyArray.indexOf(1) + 1;
-
-    if (index > this.targets.length - 1) index = 0;
+    let index = (num > this.targets.length -1) ? 0 : num;
 
     let newName = this.targets[index].name;
+    let newColor = this.targets[index].color;
     
     this.setState(
       {
         activeTarget: index,
         activeTargetName: newName,
-        activeColor: this.targets[index].color
+        activeColor: newColor,
       }
     );
   };
 
+  handleScroll = () => {  
+    const currentScrollPos = window.pageYOffset;
+    const visible = currentScrollPos < 100;
+  
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible
+    });
+  };
+
+  enterMenu = () => {
+    this.setState({ visible: true });
+  }
+
+  leaveMenu = () => {
+    let timeoutLength = 300;
+     setTimeout(() => {
+      this.setState({ visible: false });
+     }, timeoutLength);
+  }
+
+  handleClick = () => {
+    this.setState({ visible: !this.state.visible });
+  }
+
   render() {
-    let offSet = -80;
+    let offSet = (this.state.activeTargetName === "helloSection") ? -80 : -20;
     return (
-      <nav className="navi" id="navibar">
+      <nav
+        onMouseEnter={this.enterMenu}
+        onMouseLeave={this.leaveMenu}  
+        onClick={this.handleClick}
+        className={classnames("navi", {"navi-hidden": !this.state.visible})} id="navibar"
+      >
         <div className="navi-content">
          
           <h5 className="navi-logo" onClick={this.scrollToTop}>sander vermeer</h5>

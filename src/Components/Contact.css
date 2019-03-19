@@ -36,7 +36,7 @@
 @media (max-width: 500px)
 {
     .contactButton h4 {
-        font-size: 3vw;
+        font-size: 0.7rem;
     }
 
     h1.display-4 {

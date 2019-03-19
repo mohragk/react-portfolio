@@ -113,3 +113,12 @@ code {
   }
 }
 
+@media (max-width: 360px) {
+  .lead {
+    font-size: 0.8rem;
+  }
+
+  a {
+  }
+}
+

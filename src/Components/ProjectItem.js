@@ -7,19 +7,12 @@ export default class ProjectItem extends Component {
     render() {
         const {title, text, imgUrl, button1Url, button1Text, button2Url, button2Text} = this.props;
 
-        const imgStyle = {
-            maxHeight: '700px',
-            minWidth: '250px',
-            padding: '2%',
-            background: 'linear-gradient(to bottom, rgba(220, 220, 220, 0) 0%, rgba(220, 220, 220, 0) 22%, gold 22%, gold 100%)',
-        };
-
         return (
             <Container fluid style={{ minHeight: 'calc(100vh - 260px)'}}>
                 <Row style={{minHeight: '72vh'} } className="d-flex flex-wrap align-items-center m-4">
                     <Col style={{padding:'2vw 0px 2vw 2vw'}}>
                         
-                         <img src={imgUrl} className="img-fluid float-right projectImage" alt={title} style={imgStyle} />
+                         <img src={imgUrl} className="img-fluid float-right projectImage" alt={title} />
   
                     </Col>
                     <Col style={{marginLeft: '2vw', marginRight:'4vw'}}>
