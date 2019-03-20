@@ -8,6 +8,8 @@
     text-decoration: none;
     display: inline-block;
     border-bottom: 2px solid crimson;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .contactButton:after {

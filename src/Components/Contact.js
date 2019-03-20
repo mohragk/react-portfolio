@@ -51,7 +51,7 @@ class Contact extends Component {
                 </Row>
                 
                 <Row className="m-4" >
-                    <Col >   
+                    <Col style={{marginBottom: '20px'}}>   
                         <ContactSnippet title="email." links={emailLinks} />
                     </Col>
                     <Col >  
