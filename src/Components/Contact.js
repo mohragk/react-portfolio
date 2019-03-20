@@ -7,14 +7,35 @@ import "./Contact.css";
 const ContactSnippet = props => (
     <div>
         <h3>{props.title}</h3>
-        <a className="contactButton" href={props.url}>
-            <h4>{props.info}</h4>
-        </a>
+        {props.links.map(
+            (link) => {
+                return <a className="contactButton" href={link.url}><h4>{link.info}</h4></a>
+            } 
+        )}
+        
     </div>
 );
 
 class Contact extends Component {
     render() {
+
+        const socialLinks = [
+            {
+                info: 'linkedin',
+                url: 'https://www.linkedin.com/in/sahvermeer/'
+            },
+            {
+                info: 'github',
+                url: 'https://www.github.com/mohragk/'
+            },
+
+        ];
+
+        const emailLinks = [{
+            info: 'info@sander-vermeer.nl',
+            url: 'mailto:info@sander-vermeer.nl'
+        },];
+
         return (
             <div className="d-flex"  style={{ minHeight: 'calc(100vh - 240px)'}}>
             <Container className="align-self-center" >
@@ -26,10 +47,10 @@ class Contact extends Component {
                 
                 <Row className="m-4" >
                     <Col >   
-                        <ContactSnippet title="email." info="info@sander-vermeer.nl" url="mailto:info@sander-vermeer.nl" />
+                        <ContactSnippet title="email." links={emailLinks} info="info@sander-vermeer.nl" url="mailto:info@sander-vermeer.nl" />
                     </Col>
                     <Col >  
-                        <ContactSnippet  title="social." info="linkedin" url="https://www.linkedin.com/in/sahvermeer/"/> 
+                        <ContactSnippet  title="social." links={socialLinks} info="linkedin" url="https://www.linkedin.com/in/sahvermeer/"/> 
                     </Col>
                 </Row>
             </Container>  
