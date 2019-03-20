@@ -20,20 +20,25 @@ class Contact extends Component {
     render() {
 
         const socialLinks = [
-            {
-                info: 'linkedin',
-                url: 'https://www.linkedin.com/in/sahvermeer/'
-            },
+            
             {
                 info: 'github',
                 url: 'https://www.github.com/mohragk/'
+            },
+            {
+                info: 'codepen',
+                url: 'https://codepen.io/sander-vermeer/'
+            },
+            {
+                info: 'linkedin',
+                url: 'https://www.linkedin.com/in/sahvermeer/'
             },
 
         ];
 
         const emailLinks = [{
-            info: 'info@sander-vermeer.nl',
-            url: 'mailto:info@sander-vermeer.nl'
+            info: 'hello@sander-vermeer.nl',
+            url: 'mailto:hello@sander-vermeer.nl'
         },];
 
         return (
@@ -41,16 +46,16 @@ class Contact extends Component {
             <Container className="align-self-center" >
                 <Row className="m-4">
                     <Col > 
-                        <h2>I'm available for work.</h2>
+                        <h2>Realising simple or broad solutions using modern methods and solutions is my cup of tea. Feel free to simply say hello or discuss your ambitions.</h2>
                     </Col>
                 </Row>
                 
                 <Row className="m-4" >
                     <Col >   
-                        <ContactSnippet title="email." links={emailLinks} info="info@sander-vermeer.nl" url="mailto:info@sander-vermeer.nl" />
+                        <ContactSnippet title="email." links={emailLinks} />
                     </Col>
                     <Col >  
-                        <ContactSnippet  title="social." links={socialLinks} info="linkedin" url="https://www.linkedin.com/in/sahvermeer/"/> 
+                        <ContactSnippet  title="social." links={socialLinks} /> 
                     </Col>
                 </Row>
             </Container>  
