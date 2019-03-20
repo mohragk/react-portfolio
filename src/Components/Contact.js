@@ -46,7 +46,7 @@ class Contact extends Component {
             <Container className="align-self-center" >
                 <Row className="m-4">
                     <Col > 
-                        <h2>Realising simple or broad solutions using modern methods and solutions is my cup of tea. Feel free to simply say hello or discuss your ambitions.</h2>
+                        <h2>Realizing simple or broad solutions using modern methods and solutions is my cup of tea. Feel free to simply say hello or discuss your ambitions.</h2>
                     </Col>
                 </Row>
                 
