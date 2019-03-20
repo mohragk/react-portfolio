@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./NavBar.css";
+import "../index.css";
 import classnames from "classnames";
 
 export default class Navibar extends Component {
@@ -187,10 +188,10 @@ export default class Navibar extends Component {
         smooth={true}
         offset={offSet}
         duration={500}
-        style={{position: 'fixed', right: '40px', bottom: '30px', borderBottom: `2px solid ${this.state.activeColor}`, zIndex: '1000' }}
+        style={{position: 'fixed', right: '20px', bottom: '30px', borderBottom: `3px solid ${this.state.activeColor}`, zIndex: '1000' }}
         className="navi-item next-button"
         >
-        next
+        <p className="navi-item next-button" style={{fontFamily: 'mdl-ui', fontSize: '22px', margin: '0px'}}>&#xf0ae;</p>
       </Link>
     </div></nav>
     </React.Fragment>
