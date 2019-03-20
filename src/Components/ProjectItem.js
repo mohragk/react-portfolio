@@ -18,7 +18,7 @@ export default class ProjectItem extends Component {
                     <Col style={{marginLeft: '2vw', marginRight:'4vw'}}>
                     
                         <h2>{title}</h2>
-                        <p className="lead">{text}</p>
+                        <p className="lead" style={{padding: '40px 0px'}}>{text}</p>
                         <a className="projectButton" href={button1Url} target="_blank" rel="noopener noreferrer"><h4>{button1Text}</h4></a>
                         <a className="projectButton" href={button2Url} target="_blank" rel="noopener noreferrer"><h4>{button2Text}</h4></a>
              
