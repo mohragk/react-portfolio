@@ -188,10 +188,10 @@ export default class Navibar extends Component {
         smooth={true}
         offset={offSet}
         duration={500}
-        style={{position: 'fixed', right: '20px', bottom: '30px', borderBottom: `3px solid ${this.state.activeColor}`, zIndex: '1000' }}
-        className="navi-item next-button"
+        style={{position: 'fixed', left: 'calc(50vw - 12px)', bottom: '30px', borderBottom: `3px solid ${this.state.activeColor}`, zIndex: '1000' }}
+        className={classnames(  "next-button", {"rotate": this.state.activeTargetName === "hello"})}
         >
-        <p className="navi-item next-button" style={{fontFamily: 'mdl-ui', fontSize: '22px', margin: '0px'}}>&#xf0ae;</p>
+        <p className="navi-item" style={{fontFamily: 'mdl-ui', fontSize: '24px', margin: '0px'}}>&#xE70D;</p>
       </Link>
     </div></nav>
     </React.Fragment>

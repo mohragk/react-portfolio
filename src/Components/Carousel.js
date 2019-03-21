@@ -14,8 +14,10 @@ const items = [
     imgUrl: './img/monosynth-card.png',
     title: "Monosynth-1, an analogue modelled synthesizer VST (C++)",
     text: `This is a software synthesizer, made to be used as a VST plug-in or standalone application. It's realised in C++ using the Juce framework. It features 3 oscillators, 3 different filter models, 3 envelope generators, an LFO and a simple yet powerfull sequencer. `,
-    button1Text: 'github',
-    button1Url: 'https://github.com/mohragk/VermeerMonosynth-1',
+    button1Text: 'demo song',
+    button1Url: 'https://soundcloud.com/meneervermeer/telemetry',
+    button2Text: 'github',
+    button2Url: 'https://github.com/mohragk/VermeerMonosynth-1',
   },
   {
     imgUrl: './img/fourier-card.png',

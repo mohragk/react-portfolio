@@ -71,6 +71,24 @@
   
   }
 
+
+  .next-button {
+    opacity: 0.7s;
+    transform: rotateZ(0deg);
+    transition: transform 0.3s;
+  }
+
+  .next-button:hover {
+    opacity: 1.0;
+  }
+
+  .rotate {
+    transform: rotateZ(180deg);
+    transition: transform 0.3s;
+  }
+
+
+
   @media (max-width: 750px) {
     .navi .navi-content {
       padding: 0rem 2rem;
