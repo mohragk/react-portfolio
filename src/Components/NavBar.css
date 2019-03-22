@@ -71,6 +71,11 @@
   
   }
 
+  .navi-item > .activeGreen {
+    border-bottom: 2px solid mediumspringgreen;
+  
+  }
+
 
   .next-button {
     opacity: 0.7s;

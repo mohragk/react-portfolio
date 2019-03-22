@@ -37,7 +37,10 @@ export default class Navibar extends Component {
       id: 1, name: "projects", color: "gold"
     },
     {
-      id: 2, name: "contact", color: "crimson"
+      id: 2, name: "art", color: "mediumspringgreen"
+    },
+    {
+      id: 3, name: "contact", color: "crimson"
     },
   ];
 
@@ -147,7 +150,6 @@ export default class Navibar extends Component {
             
             <li className="navi-item" id="blue">
               <Link
-                id="ps"
                 activeClass="activeGold"
                 to="projects"
                 spy={true}
@@ -158,6 +160,21 @@ export default class Navibar extends Component {
                 onSetActive={ (to) => this.onSetActiveHandler(to) }
               >
                 projects
+              </Link>
+            </li>
+
+            <li className="navi-item" id="blue">
+              <Link
+                activeClass="activeGreen"
+                to="art"
+                spy={true}
+                hashSpy={true}
+                smooth={true}
+                offset={offSet}
+                duration={500}
+                onSetActive={ (to) => this.onSetActiveHandler(to) }
+              >
+                art
               </Link>
             </li>
 

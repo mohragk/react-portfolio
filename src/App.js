@@ -4,6 +4,7 @@ import Navibar from "./Components/Navbar";
 import Section from "./Components/Section";
 import Contact from "./Components/Contact";
 import Hello from "./Components/Hello";
+import Art from "./Components/Art";
 import Footer from "./Components/Footer";
 import ProjectCarousel from "./Components/Carousel";
 
@@ -29,14 +30,24 @@ class App extends Component {
             >
             <ProjectCarousel />
           </Section>
+          <Section
+            title="art"
+            dark={false}
+            color='MediumSpringGreen'
+            id="art"
+          >
+            <Art />
+
+          </Section>
           <Section 
             title="contact"
-            dark={false}
+            dark={true}
             color="crimson"
             id="contact"
           >
             <Contact />
           </Section>
+          
           <Footer />
       </div>
     );
