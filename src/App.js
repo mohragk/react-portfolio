@@ -7,6 +7,7 @@ import Hello from "./Components/Hello";
 import Art from "./Components/Art";
 import Footer from "./Components/Footer";
 import ProjectCarousel from "./Components/Carousel";
+import ImageBox from "./Components/Art";
 
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
             color='MediumSpringGreen'
             id="art"
           >
-            <Art />
+            <ImageBox />
 
           </Section>
           <Section 
