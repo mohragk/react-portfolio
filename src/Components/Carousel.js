@@ -14,48 +14,82 @@ const items = [
     imgUrl: './img/monosynth-card.png',
     title: "Monosynth-1, an analogue modelled synthesizer VST (C++)",
     text: `This is a software synthesizer, made to be used as a VST plug-in or standalone application. It's realised in C++ using the Juce framework. It features 3 oscillators, 3 different filter models, 3 envelope generators, an LFO and a simple yet powerfull sequencer. `,
-    button1Text: 'demo song',
-    button1Url: 'https://soundcloud.com/meneervermeer/telemetry',
-    button2Text: 'github',
-    button2Url: 'https://github.com/mohragk/VermeerMonosynth-1',
+    buttons: [
+      {
+        url: './downloads/Vermeer Monosynth-1.pkg',
+        name: 'get for mac',
+        download: true
+      },
+      {
+        url: 'https://soundcloud.com/meneervermeer/telemetry',
+        name: 'listen'
+      },
+      { 
+        url: 'https://github.com/mohragk/VermeerMonosynth-1',
+        name: 'github'
+      },
+      
+    ],
   },
   {
     imgUrl: './img/fourier-card.png',
     title: "A visualisation of the Fourier Series in P5.js",
     text: "A rendering of harmonics in audio signals. Switch between square wave, saw wave and triangle wave and add harmonics. Use the keyboard to play some notes.",
-    button1Url: 'https://editor.p5js.org/mohragk/full/BkMiw4KxV',
-    button1Text: 'demo',
-    button2Url: 'https://editor.p5js.org/mohragk/sketches/BkMiw4KxV',
-    button2Text: 'edit',
+    buttons: [
+      {
+        url: 'https://editor.p5js.org/mohragk/full/BkMiw4KxV',
+        name: 'demo'
+      },
+      {
+        url: 'https://editor.p5js.org/mohragk/sketches/BkMiw4KxV',
+        name: 'edit'
+      },
+    ]
   },
   {
     imgUrl: './img/shifter-card.png',
     title: "DIY sequential shifter using Arduino",
     text: "A simple, robust up-down shifter, designed to work with racing games. The control board is programmed in Arduino and extended to work with a (future) handbrake. A GUI was created for setting different variables for said handbrake.",
-    button1Url: 'https://www.youtube.com/watch?v=0ZPwsYKEWEM',
-    button1Text: 'youtube',
-    button2Url: 'https://github.com/mohragk/Shifter_Handbrake_DIY',
-    button2Text: 'github',
+    buttons: [
+      {
+        url: 'https://www.youtube.com/watch?v=0ZPwsYKEWEM',
+        name: 'youtube'
+      },
+      {
+        url: 'https://github.com/mohragk/Shifter_Handbrake_DIY',
+        name: 'github'
+      }
+    ]
   },
   {
     imgUrl: './img/wordyclock-card.png',
     title: "Wordy Clock",
     text: "A clock that literally tells time.",
-    button1Url: 'https://editor.p5js.org/mohragk/full/cuRLIK3Pq',
-    button1Text: 'demo',
-    button2Url: 'https://editor.p5js.org/mohragk/sketches/cuRLIK3Pq',
-    button2Text: 'edit',
-
+    buttons: [
+      {
+        url: 'https://editor.p5js.org/mohragk/full/cuRLIK3Pq',
+        name: 'demo'
+      },
+      {
+        url: 'https://editor.p5js.org/mohragk/sketches/cuRLIK3Pq',
+        name: 'edit'
+      },
+    ]
   },
   {
     imgUrl: './img/matrix-card.png',
     title: "Matrix Effect made in P5.js",
     text: "A contemporary remake of a classic.",
-    button1Url: 'https://editor.p5js.org/mohragk/full/Sk2QPOsWE',
-    button1Text: 'demo',
-    button2Url: 'https://editor.p5js.org/mohragk/sketches/Sk2QPOsWE',
-    button2Text: 'edit',
-
+    buttons: [
+      {
+        url: 'https://editor.p5js.org/mohragk/full/Sk2QPOsWE',
+        name: 'demo'
+      },
+      {
+        url: 'https://editor.p5js.org/mohragk/sketches/Sk2QPOsWE',
+        name: 'edit'
+      },
+    ]
   },
 ];
 
@@ -113,6 +147,7 @@ class ProjectCarousel extends Component {
             button1Url={item.button1Url}
             button2Text={item.button2Text}
             button2Url={item.button2Url}
+            buttons={item.buttons}
             key={item.title}
           />
           </CarouselItem>

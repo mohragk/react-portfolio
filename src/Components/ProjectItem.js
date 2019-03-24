@@ -3,9 +3,8 @@ import {Container, Row, Col} from "reactstrap";
 import "./ProjectItem.css";
 
 export default class ProjectItem extends Component {
-
     render() {
-        const {title, text, imgUrl, button1Url, button1Text, button2Url, button2Text} = this.props;
+        const {title, text, imgUrl, buttons} = this.props;
 
         return (
             <Container fluid style={{ minHeight: 'calc(100vh - 260px)'}}>
@@ -19,11 +18,18 @@ export default class ProjectItem extends Component {
                     
                         <h2>{title}</h2>
                         <p className="lead" style={{padding: '3vh 0px'}}>{text}</p>
-                        <a className="projectButton" href={button1Url} target="_blank" rel="noopener noreferrer"><h4>{button1Text}</h4></a>
-                        <a className="projectButton" href={button2Url} target="_blank" rel="noopener noreferrer"><h4>{button2Text}</h4></a>
-             
-
                         
+                        { 
+                            buttons.map(
+                                (btn) => {
+                                    if (btn.download) {
+                                        return(<a className="projectButton" href={btn.url} download><h4>{btn.name}</h4> </a>);
+                                    } else {
+                                        return(<a className="projectButton" href={btn.url} target="_blank" rel="noopener noreferrer"><h4>{btn.name}</h4> </a>);
+                                    }
+                                }
+                            )       
+                        }
                        
                     </Col>
                 </Row>

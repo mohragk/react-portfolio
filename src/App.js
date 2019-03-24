@@ -4,7 +4,6 @@ import Navibar from "./Components/Navbar";
 import Section from "./Components/Section";
 import Contact from "./Components/Contact";
 import Hello from "./Components/Hello";
-import Art from "./Components/Art";
 import Footer from "./Components/Footer";
 import ProjectCarousel from "./Components/Carousel";
 import ImageBox from "./Components/Art";
