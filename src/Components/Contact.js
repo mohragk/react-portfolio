@@ -9,7 +9,7 @@ const ContactSnippet = props => (
         <h3>{props.title}</h3>
         {props.links.map(
             (link) => {
-                return <a className="contactButton" href={link.url}><h4>{link.info}</h4></a>
+                return <a key={link.url} className="contactButton" href={link.url}><h4>{link.info}</h4></a>
             } 
         )}
         

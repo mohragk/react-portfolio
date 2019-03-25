@@ -61,7 +61,6 @@ export default class ImageBox extends React.Component {
     }
 
     openLightBox = (clickedImage) => {
-        console.log('trying to open');
         this.setState({
             lightboxIsOpen: true,
             currentImage: clickedImage

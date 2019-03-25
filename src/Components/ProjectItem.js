@@ -23,9 +23,9 @@ export default class ProjectItem extends Component {
                             buttons.map(
                                 (btn) => {
                                     if (btn.download) {
-                                        return(<a className="projectButton" href={btn.url} download><h4>{btn.name}</h4> </a>);
+                                        return(<a key={btn.url} className="projectButton" href={btn.url} download><h4>{btn.name}</h4> </a>);
                                     } else {
-                                        return(<a className="projectButton" href={btn.url} target="_blank" rel="noopener noreferrer"><h4>{btn.name}</h4> </a>);
+                                        return(<a key={btn.url} className="projectButton" href={btn.url} target="_blank" rel="noopener noreferrer"><h4>{btn.name}</h4> </a>);
                                     }
                                 }
                             )       
