@@ -17,12 +17,12 @@ const items = [
     buttons: [
       {
         url: './downloads/Vermeer Monosynth-1.pkg',
-        name: 'get for mac',
+        name: 'mac',
         download: true
       },
       {
         url: './downloads/monosynth-1-setup.zip',
-        name: 'get for windows',
+        name: 'windows',
         download: true
       },
       {
