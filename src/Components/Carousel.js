@@ -21,6 +21,11 @@ const items = [
         download: true
       },
       {
+        url: './downloads/monosynth-1-setup.zip',
+        name: 'get for windows',
+        download: true
+      },
+      {
         url: 'https://soundcloud.com/meneervermeer/telemetry',
         name: 'listen'
       },
