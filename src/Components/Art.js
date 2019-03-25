@@ -98,22 +98,22 @@ export default class ImageBox extends React.Component {
       <Container style={{minHeight: 'calc(100vh - 360px)'}} >
                 <Row >
                     <Col xs="6">
-                        <a onClick={ () => this.openLightBox(0)} href="/"> <FadeImage imgUrl={this.items[0].imgUrl} title={this.items[0].title} /> </a>
+                        <a onClick={ () => this.openLightBox(0)} > <FadeImage imgUrl={this.items[0].imgUrl} title={this.items[0].title} /> </a>
                     </Col>
                     <Col xs="6" >
-                        <a onClick={ () => this.openLightBox(1)} href="/"><FadeImage imgUrl={this.items[1].imgUrl} title={this.items[1].title} /> </a>
+                        <a onClick={ () => this.openLightBox(1)} ><FadeImage imgUrl={this.items[1].imgUrl} title={this.items[1].title} /> </a>
                     </Col>
                     
                 </Row>
                 <Row >
                     <Col xs="6" sm="4">
-                        <a onClick={ () => this.openLightBox(2)} href="/"> <FadeImage imgUrl={this.items[2].imgUrl} title={this.items[2].title} /> </a>
+                        <a onClick={ () => this.openLightBox(2)} > <FadeImage imgUrl={this.items[2].imgUrl} title={this.items[2].title} /> </a>
                     </Col>
                     <Col xs="6" sm="4">
-                        <a onClick={ () => this.openLightBox(3)} href="/"><FadeImage imgUrl={this.items[3].imgUrl} title={this.items[3].title} />   </a>                 
+                        <a onClick={ () => this.openLightBox(3)} ><FadeImage imgUrl={this.items[3].imgUrl} title={this.items[3].title} />   </a>                 
                     </Col>
                     <Col xs="6" sm="4">
-                    <a onClick={ () => this.openLightBox(4)} href="/"><FadeImage imgUrl={this.items[4].imgUrl} title={this.items[4].title} /> </a>
+                    <a onClick={ () => this.openLightBox(4)} ><FadeImage imgUrl={this.items[4].imgUrl} title={this.items[4].title} /> </a>
                     </Col>
                 </Row>
             </Container>    
