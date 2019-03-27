@@ -10,11 +10,11 @@ export default class Navibar extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
+    window.addEventListener("scroll", this.debounce(this.handleScrollNormal, 50));
   }
   
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
+    window.removeEventListener("scroll", this.debounce(this.handleScrollNormal, 50));
   }
  
   state = {

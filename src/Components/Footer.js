@@ -12,11 +12,11 @@ class Footer extends Component {
     prevScrollpos = window.pageYOffset;
 
     componentDidMount() {
-        window.addEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
+        window.addEventListener("scroll", this.debounce(this.handleScrollNormal, 50));
     }
       
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
+        window.removeEventListener("scroll", this.debounce(this.handleScrollNormal, 50));
     }
 
    
