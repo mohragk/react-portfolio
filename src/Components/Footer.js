@@ -12,40 +12,40 @@ class Footer extends Component {
     prevScrollpos = window.pageYOffset;
 
     componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
     }
       
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
     }
 
    
-    timer;
+    debounce = (fn, time) => {
+        let timeout;
+        
+        return function() {
+          const functionCall = () => fn.apply(this, arguments);
+    
+          clearTimeout(timeout);
+          timeout = setTimeout(functionCall, time);
+        }
+      }
+    
 
-    handleScroll = () => {
-      
-        if (this.timer) {
-            window.clearTimeout(this.timer);
+
+    handleScrollNormal = () => {
+        const currentScrollPos = window.pageYOffset;
+        const visible = this.prevScrollpos > currentScrollPos;
+    
+        if (this.prevVisability !== visible) {
+            this.setState({
+        visible,
+        });
         }
 
-        this.timer = window.setTimeout ( 
-            () => {
-                const currentScrollPos = window.pageYOffset;
-                const visible = this.prevScrollpos > currentScrollPos;
-            
-                if (this.prevVisability !== visible) {
-                    this.setState({
-                visible,
-                });
-                }
-
-                this.prevVisability = visible;
-                this.prevScrollpos = currentScrollPos;
-            }, 
-            13
-        );
-        
-      };
+        this.prevVisability = visible;
+        this.prevScrollpos = currentScrollPos;
+    };
 
     render() {
         

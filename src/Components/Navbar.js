@@ -95,8 +95,6 @@ export default class Navibar extends Component {
       clearTimeout(timeout);
       timeout = setTimeout(functionCall, time);
     }
-
-    
   }
 
  
