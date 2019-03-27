@@ -10,13 +10,11 @@ export default class Navibar extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("wheel", this.handleScroll);
+    window.addEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
   }
   
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-    window.removeEventListener("wheel", this.handleScroll);
+    window.removeEventListener("scroll", this.debounce(this.handleScrollNormal, 13));
   }
  
   state = {
@@ -88,17 +86,23 @@ export default class Navibar extends Component {
     
   };
 
-  timer;
+  debounce = (fn, time) => {
+    let timeout;
+    
+    return function() {
+      const functionCall = () => fn.apply(this, arguments);
 
-  handleScroll = () => { 
-    
-    if (this.timer) {
-      window.clearTimeout(this.timer);
+      clearTimeout(timeout);
+      timeout = setTimeout(functionCall, time);
     }
+
     
-    this.timer = window.setTimeout ( 
-      () => {
-        const entered = this.state.menuEntered && window.innerWidth > 1023;
+  }
+
+ 
+
+  handleScrollNormal = () => {
+    const entered = this.state.menuEntered && window.innerWidth > 1023;
         if (entered) return;
     
         
@@ -116,9 +120,6 @@ export default class Navibar extends Component {
     
         this.prevVisability = visible;
         this.prevScrollpos = currentScrollPos;
-      }, 13
-    );
-   
   };
 
 
