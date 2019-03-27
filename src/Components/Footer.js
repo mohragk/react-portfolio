@@ -19,20 +19,32 @@ class Footer extends Component {
         window.removeEventListener("scroll", this.handleScroll);
     }
 
+   
+    timer;
+
     handleScroll = () => {
       
-        const currentScrollPos = window.pageYOffset;
-        const visible = this.prevScrollpos > currentScrollPos;
-      
-        if (this.prevVisability !== visible) {
-            this.setState({
-         
-          visible,
-        });
+        if (this.timer) {
+            window.clearTimeout(this.timer);
         }
 
-        this.prevVisability = visible;
-        this.prevScrollpos = currentScrollPos;
+        this.timer = window.setTimeout ( 
+            () => {
+                const currentScrollPos = window.pageYOffset;
+                const visible = this.prevScrollpos > currentScrollPos;
+            
+                if (this.prevVisability !== visible) {
+                    this.setState({
+                visible,
+                });
+                }
+
+                this.prevVisability = visible;
+                this.prevScrollpos = currentScrollPos;
+            }, 
+            13
+        );
+        
       };
 
     render() {

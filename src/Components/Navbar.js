@@ -88,25 +88,37 @@ export default class Navibar extends Component {
     
   };
 
-  handleScroll = (e) => {  
-    const entered = this.state.menuEntered && window.innerWidth > 1023;
-    if (entered) return;
+  timer;
 
+  handleScroll = () => { 
     
-    const shouldAlwaysScroll = window.innerWidth < 1024;
-    const currentScrollPos = window.pageYOffset;
-    const visible = shouldAlwaysScroll ? currentScrollPos < this.prevScrollpos :  currentScrollPos < 1;
-
-    
-    if (!entered && this.prevVisability !== visible) {  
-      this.setState({
-        visible
-      });
+    if (this.timer) {
+      window.clearTimeout(this.timer);
     }
-
-
-    this.prevVisability = visible;
-    this.prevScrollpos = currentScrollPos;
+    
+    this.timer = window.setTimeout ( 
+      () => {
+        const entered = this.state.menuEntered && window.innerWidth > 1023;
+        if (entered) return;
+    
+        
+        const shouldAlwaysScroll = window.innerWidth < 1024;
+        const currentScrollPos = window.pageYOffset;
+        const visible = shouldAlwaysScroll ? currentScrollPos < this.prevScrollpos :  currentScrollPos < 1;
+    
+        
+        if (!entered && this.prevVisability !== visible) {  
+          this.setState({
+            visible
+          });
+        }
+    
+    
+        this.prevVisability = visible;
+        this.prevScrollpos = currentScrollPos;
+      }, 13
+    );
+   
   };
 
 
