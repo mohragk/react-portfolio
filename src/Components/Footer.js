@@ -5,7 +5,8 @@ import classnames from "classnames";
 class Footer extends Component {
     state = {
         prevScrollpos: window.pageYOffset,
-        visible: true
+        visible: true,
+        lastVisible: false
     };
     
     componentDidMount() {
@@ -24,7 +25,7 @@ class Footer extends Component {
       
         this.setState({
           prevScrollpos: currentScrollPos,
-          visible
+          visible,
         });
       };
 

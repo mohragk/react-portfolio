@@ -3,11 +3,14 @@
   bottom: 10px;
   left: 10px;
   padding: 0px 20px;
-  transition: all .8s;
+  transform: translateY(0);
+  transition: transform .8s;
+  will-change: transform;
 }
 
 .footer-content-hidden {
-  bottom: -100px !important;
+  transform: translateY(100px);
+  
 }
 
 

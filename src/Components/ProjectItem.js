@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Container, Row, Col} from "reactstrap";
 import "./ProjectItem.css";
+import "../index.css";
 
 export default class ProjectItem extends Component {
     render() {
@@ -23,7 +24,7 @@ export default class ProjectItem extends Component {
                             buttons.map(
                                 (btn) => {
                                     if (btn.download) {
-                                        return(<a key={btn.url} className="projectButton" href={btn.url} download><h4>{btn.name}</h4> </a>);
+                                        return(<a key={btn.url} className="projectButton" href={btn.url} download><h4><span style={{fontFamily: "mdl-ui", fontSize: "12px"}}>&#xF0AE; </span>{btn.name}</h4> </a>);
                                     } else {
                                         return(<a key={btn.url} className="projectButton" href={btn.url} target="_blank" rel="noopener noreferrer"><h4>{btn.name}</h4> </a>);
                                     }

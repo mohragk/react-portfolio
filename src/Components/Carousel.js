@@ -22,7 +22,7 @@ const items = [
       },
       {
         url: './downloads/monosynth-1-setup.zip',
-        name: 'windows',
+        name: 'win',
         download: true
       },
       {
