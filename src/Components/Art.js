@@ -13,19 +13,19 @@ export default class ImageBox extends React.Component {
     };
     lbItems = [
         {
-            src: './img/meneervermeer_logo_80s.png',
+            src: './img/jpg/meneervermeer_logo_80s.jpg',
         },
         {
-            src: './img/telemetry_cover.png',
+            src: './img/jpg/telemetry_cover.jpg',
         },
         {
-            src: './img/sacre-coeur-cover.png',
+            src: './img/jpg/sacre-coeur-cover.jpg',
         },
         {
-            src: './img/dusk_cover_alt.png',
+            src: './img/jpg/dusk_cover_alt.jpg',
         },
         {
-            src: './img/periodic-layering-cover.png',
+            src: './img/jpg/periodic-layering-cover.jpg',
         },
         
        
@@ -33,23 +33,23 @@ export default class ImageBox extends React.Component {
 
     items = [
         {
-            imgUrl: './img/meneervermeer_logo_80s.png',
+            imgUrl: './img/jpg/meneervermeer_logo_80s.jpg',
             title: 'Meneer Vermeer logo',
         },
         {
-            imgUrl: './img/telemetry_cover.png',
+            imgUrl: './img/jpg/telemetry_cover.jpg',
             title: 'Cover art Telemetry',
         },
         {
-            imgUrl: './img/sacre-coeur-cover.png',
+            imgUrl: './img/jpg/sacre-coeur-cover.jpg',
             title: 'Cover art Sacre Coeur',
         },
         {
-            imgUrl: './img/dusk_cover_alt.png',
+            imgUrl: './img/jpg/dusk_cover_alt.jpg',
             title: 'Cover art Dusk EP',
         },
         {
-            imgUrl: './img/periodic-layering-cover.png',
+            imgUrl: './img/jpg/periodic-layering-cover.jpg',
             title: 'Cover art Periodic Layering',
         },
         

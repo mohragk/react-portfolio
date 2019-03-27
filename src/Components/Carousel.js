@@ -11,7 +11,7 @@ import ProjectItem from "./ProjectItem";
 
 const items = [
   {
-    imgUrl: './img/monosynth-card.png',
+    imgUrl: './img/jpg/monosynth-card.jpg',
     title: "Monosynth-1, an analogue modelled synthesizer VST (C++)",
     text: `This is a software synthesizer, made to be used as a VST plug-in or standalone application. It's realised in C++ using the Juce framework. It features 3 oscillators, 3 different filter models, 3 envelope generators, an LFO and a simple yet powerfull sequencer. `,
     buttons: [
@@ -37,7 +37,7 @@ const items = [
     ],
   },
   {
-    imgUrl: './img/fourier-card.png',
+    imgUrl: './img/jpg/fourier-card.jpg',
     title: "A visualisation of the Fourier Series in P5.js",
     text: "A rendering of harmonics in audio signals. Switch between square wave, saw wave and triangle wave and add harmonics. Use the keyboard to play some notes.",
     buttons: [
@@ -52,7 +52,7 @@ const items = [
     ]
   },
   {
-    imgUrl: './img/shifter-card.png',
+    imgUrl: './img/jpg/shifter-card.jpg',
     title: "DIY sequential shifter using Arduino",
     text: "A simple, robust up-down shifter, designed to work with racing games. The control board is programmed in Arduino and extended to work with a (future) handbrake. A GUI was created for setting different variables for said handbrake.",
     buttons: [
@@ -67,7 +67,7 @@ const items = [
     ]
   },
   {
-    imgUrl: './img/wordyclock-card.png',
+    imgUrl: './img/jpg/wordyclock-card.jpg',
     title: "Wordy Clock",
     text: "A clock that literally tells time.",
     buttons: [
@@ -82,7 +82,7 @@ const items = [
     ]
   },
   {
-    imgUrl: './img/matrix-card.png',
+    imgUrl: './img/jpg/matrix-card.jpg',
     title: "Matrix Effect made in P5.js",
     text: "A contemporary remake of a classic.",
     buttons: [
