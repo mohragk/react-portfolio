@@ -24,10 +24,12 @@ export default class Navibar extends Component {
     activeTargetName: "projects",
     activeColor: "skyblue",
     nextTarget: "contact",
-    prevScrollpos: window.pageYOffset,
     visible: true,
     menuEntered: false,
   };
+
+  prevVisability = true;
+  prevScrollpos = window.pageYOffset;
 
   targets = [
     {
@@ -90,18 +92,21 @@ export default class Navibar extends Component {
     const entered = this.state.menuEntered && window.innerWidth > 1023;
     if (entered) return;
 
-    const {prevScrollpos} = this.state;
+    
     const shouldAlwaysScroll = window.innerWidth < 1024;
     const currentScrollPos = window.pageYOffset;
-    const visible = shouldAlwaysScroll ? currentScrollPos < prevScrollpos :  currentScrollPos < 1;
+    const visible = shouldAlwaysScroll ? currentScrollPos < this.prevScrollpos :  currentScrollPos < 1;
 
     
-    if (!entered) {  
+    if (!entered && this.prevVisability !== visible) {  
       this.setState({
-        prevScrollpos: currentScrollPos,
         visible
       });
     }
+
+
+    this.prevVisability = visible;
+    this.prevScrollpos = currentScrollPos;
   };
 
 
