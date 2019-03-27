@@ -6,9 +6,11 @@ class Footer extends Component {
     state = {
         prevScrollpos: window.pageYOffset,
         visible: true,
-        lastVisible: false
     };
     
+    prevVisability = true;
+    prevScrollpos = window.pageYOffset;
+
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
     }
@@ -18,15 +20,19 @@ class Footer extends Component {
     }
 
     handleScroll = () => {
-        const { prevScrollpos } = this.state;
       
         const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos > currentScrollPos;
+        const visible = this.prevScrollpos > currentScrollPos;
       
-        this.setState({
-          prevScrollpos: currentScrollPos,
+        if (this.prevVisability != visible) {
+            this.setState({
+         
           visible,
         });
+        }
+
+        this.prevVisability = visible;
+        this.prevScrollpos = currentScrollPos;
       };
 
     render() {
