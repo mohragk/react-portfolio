@@ -24,7 +24,7 @@ class Footer extends Component {
         const currentScrollPos = window.pageYOffset;
         const visible = this.prevScrollpos > currentScrollPos;
       
-        if (this.prevVisability != visible) {
+        if (this.prevVisability !== visible) {
             this.setState({
          
           visible,
