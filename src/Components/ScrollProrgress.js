@@ -31,7 +31,7 @@ class ScrollProgressBar extends React.Component {
 
         const barStyle = {
             height: '4px',
-            background: '#e91e63',
+            background: '#BFC1FF',
             width: this.state.amountScrolled
         }
 
