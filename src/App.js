@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import ScrollProgressBar from "./Components/ScrollProrgress"
 import Navibar from "./Components/Navbar";
 import Section from "./Components/Section";
 import Contact from "./Components/Contact";
@@ -12,6 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <ScrollProgressBar />
         <Navibar />
           <Section
             title="sander vermeer"
