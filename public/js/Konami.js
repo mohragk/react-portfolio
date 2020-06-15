@@ -19,7 +19,8 @@ let konamiCodePosition = 0;
 document.addEventListener('keydown', function(e) {
 
     // Only when holding down shift-key
-    if (e.getModifierState("Shift")) {
+    //if (e.getModifierState("Shift")) 
+    {
         // Handle Accel + Shift + C
         //e.preventDefault(); // consume the key event
 
