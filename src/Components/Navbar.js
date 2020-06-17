@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+
 import "./NavBar.css";
 import classnames from "classnames";
 
@@ -174,6 +175,17 @@ export default class Navibar extends Component {
                 contact
               </Link>
             </li>
+
+            <li className="navi-item">
+              <Link
+                href='https://github.com/mohragk/'
+              >
+                github
+              </Link>
+            </li>
+
+            
+
           </ul>
         </div>
         

@@ -115,3 +115,7 @@
     margin: 0px;
     padding: 0px;
   }
+
+  a:link, a:hover {
+    text-decoration: none;
+  }
