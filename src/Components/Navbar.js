@@ -177,11 +177,11 @@ export default class Navibar extends Component {
             </li>
 
             <li className="navi-item">
-              <Link
+              <a
                 href='https://github.com/mohragk/'
               >
                 github
-              </Link>
+              </a>
             </li>
 
             
