@@ -1,45 +1,25 @@
 import React, { Component } from "react";
 import "./App.css";
-import ScrollProgressBar from "./Components/ScrollProrgress"
-import Navibar from "./Components/Navbar";
-import Section from "./Components/Section";
-import Contact from "./Components/Contact";
-import Hello from "./Components/Hello";
-import Footer from "./Components/Footer";
-import ProjectCarousel from "./Components/Carousel";
+import Main from "./Main"
+import Downloads from "./Downloads"
 
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ScrollProgressBar />
-        <Navibar />
-          <Section
-            title="sander vermeer"
-            dark={false}
-            color="skyblue"
-            id="hello"
-          >
-            <Hello />
-          </Section>
-          <Section 
-            title="projects"
-            dark={true}
-            color='gold'
-            id="projects"
-            >
-            <ProjectCarousel />
-          </Section>
-          <Section 
-            title="contact"
-            dark={false}
-            color="crimson"
-            id="contact"
-          >
-            <Contact />
-          </Section>
-          <Footer />
+        <BrowserRouter>
+
+        <Switch>
+            <Route path="/" component={Main} exact/>
+            <Route path="/downloads" exact >
+              <Downloads dark title="downloads"></Downloads>
+            </Route>
+            <Route component={Error}/>
+           </Switch>
+        </BrowserRouter>
       </div>
     );
   }
