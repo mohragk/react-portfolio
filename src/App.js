@@ -4,7 +4,7 @@ import Main from "./Main"
 import Downloads from "./Downloads"
 
 
-import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
