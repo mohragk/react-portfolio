@@ -37,7 +37,7 @@ class Downloads extends Component {
         
       <div style={sectionContentStyle} >
         <ul>
-            <li><Link style={{fontSize: "2rem"}} to="/files/Paardensprong-Game.zip" target="_blank" download>Paardensprong Game</Link></li>
+            <li><Link style={{fontSize: "2rem"}} to="/files/Paardensprong-Game.zip" target="_blank" download>paardensprong game</Link></li>
         </ul>
       </div>
     </div>
